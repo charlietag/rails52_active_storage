@@ -2,7 +2,10 @@
 
 Try active_storage
 
-This is so cool that uploaded file will no longer been saved under path '/public/xxx'
+This is so cool that uploaded file will no longer been saved under path '/public/xxx'.
+Instead, it's under ROOT/storage/
+We'd better modify the config(config/storage.yml), to move ROOT/storage to ROOT/storage_prod for PROD mode.
+Then, we can prevent us from uploading all files into ROOT/storage/xxx in both PROD and DEV mode.
 
 Things you may want to cover:
 
