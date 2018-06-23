@@ -1,5 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<% if @member.avatar.attached? %>
+  <%= image_tag(@member.avatar) %>
+<% end %>
+</p>
+<% if @member.documents.attached? %>
+  <p> 
+  <h2>Download Documents</h2>
+  <% @member.documents.each_with_index do |doc, i| %>
+    <p> 
+    <%= link_to("doc##{i}", rails_blob_path(doc, disposition: "attachment")) %>
+    </p>
+  <% end %>
+  </p>
+<% end %>
+
 <p>
   <strong>Name:</strong>
   <%= @member.name %>
