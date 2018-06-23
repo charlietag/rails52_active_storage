@@ -2,6 +2,8 @@
 
 Try active_storage
 
+This is so cool that uploaded file will no longer been saved under path '/public/xxx'
+
 Things you may want to cover:
 
 * Ruby version
